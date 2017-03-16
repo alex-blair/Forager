@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "sdkVersion": "14.0.0",
+    "name": "forager",
+    "icon": "./images/compassfruit.png",
+    "packagerOpts": {
+      "assetExts": [
+        "ttf"
+      ]
+    }
+  }
+}
