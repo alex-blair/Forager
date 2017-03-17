@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { StyleSheet, ScrollView, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation' ;
 import Button from 'react-native-button';
-// import { ForageScreen } from ./components/ForageScreen.js ;
+
+import ForageScreen from './components/ForageScreen'
+import { ShareScreen, navigationOptions } from './components/ShareScreen'
+
 
 class MainScreen extends React.Component {
     static navigationOptions = {
@@ -13,16 +16,16 @@ class MainScreen extends React.Component {
     return (
       <View style={{flex: 1}}>
         <Button
-        containerStyle={{flex: 2, overflow:'hidden', borderRadius:4, backgroundColor:'skyblue', alignItems: 'center',
+        containerStyle={{flex: 2, overflow:'hidden', borderRadius:4, backgroundColor:'#376565', alignItems: 'center',
         justifyContent: 'center'}}
         style={[styles.white, styles.bold]}
         onPress={() => navigate('Forage')}>
         Forage
         </Button>
         <Button
-          containerStyle={{flex: 2, overflow:'hidden', borderRadius:4, backgroundColor:'powderblue', alignItems: 'center',
+          containerStyle={{flex: 2, overflow:'hidden', borderRadius:4, backgroundColor:'#fef2e4', alignItems: 'center',
           justifyContent: 'center'}}
-          style={[styles.white, styles.bold]}
+          style={[styles.green, styles.bold]}
           onPress={() => navigate('Share')}>
             Share
         </Button>
@@ -30,33 +33,6 @@ class MainScreen extends React.Component {
     );
   }
 }
-
-class ForageScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Resources',
-  };
-  render() {
-    return (
-      <View>
-        <Text>Look at the map below to find resources</Text>
-      </View>
-    );
-  }
-}
-
-class ShareScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Add New Resource',
-  };
-  render() {
-    return (
-      <View>
-        <Text>Add a new resource to the map!</Text>
-      </View>
-    );
-  }
-}
-
 
 const styles = StyleSheet.create({
   container: {
@@ -66,7 +42,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   white: {
-    color: '#fff',
+    color: '#fef2e4',
+    fontSize: 30,
+  },
+  green: {
+    color: '#376565',
     fontSize: 30,
   },
   bold: {
