@@ -18,6 +18,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  mapBox: {
+    width: 300,
+    height: 300,
+    margin: 25,
+    overflow:'hidden',
+    borderRadius:4,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   whiteBackground: {
     backgroundColor: '#fef2e4',
   },
