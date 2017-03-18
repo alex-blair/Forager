@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { StyleSheet, ScrollView, Text, View } from 'react-native';
+import { StyleSheet, ScrollView, View, Text } from 'react-native';
 import { StackNavigator } from 'react-navigation' ;
 import Button from 'react-native-button';
 
+import styles from './components/StyleSheet'
 import ForageScreen from './components/ForageScreen'
 import { ShareScreen, navigationOptions } from './components/ShareScreen'
+import HeaderText from './components/textStyles/HeaderText'
 
 
 class MainScreen extends React.Component {
@@ -14,45 +16,21 @@ class MainScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View style={{flex: 1}}>
+      <View style={styles.container}>
         <Button
-        containerStyle={{flex: 2, overflow:'hidden', borderRadius:4, backgroundColor:'#376565', alignItems: 'center',
-        justifyContent: 'center'}}
-        style={[styles.white, styles.bold]}
+        containerStyle={[styles.halfPageButton, styles.greenBackground]}
         onPress={() => navigate('Forage')}>
-        Forage
+          <HeaderText>Forage</HeaderText>
         </Button>
         <Button
-          containerStyle={{flex: 2, overflow:'hidden', borderRadius:4, backgroundColor:'#fef2e4', alignItems: 'center',
-          justifyContent: 'center'}}
-          style={[styles.green, styles.bold]}
+          containerStyle={[styles.halfPageButton, styles.greenBackground]}
           onPress={() => navigate('Share')}>
-            Share
+            <HeaderText> Share </HeaderText>
         </Button>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f0f',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  white: {
-    color: '#fef2e4',
-    fontSize: 30,
-  },
-  green: {
-    color: '#376565',
-    fontSize: 30,
-  },
-  bold: {
-    fontWeight: 'bold',
-  }
-});
 
 const App = StackNavigator({
   Main: {screen: MainScreen},
