@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { StyleSheet, ScrollView, View, Text } from 'react-native';
-import { StackNavigator } from 'react-navigation' ;
-import Button from 'react-native-button';
+import { StyleSheet, ScrollView, View, Text } from 'react-native'
+import { StackNavigator } from 'react-navigation'
+import Button from 'react-native-button'
 
 import DefaultText from './textStyles/DefaultText'
 import HeaderText from './textStyles/HeaderText'
@@ -24,7 +24,7 @@ const MainScreen = (props) => {
       <Button
         containerStyle={[styles.halfPageButton, styles.greenBackground]}
         onPress={() => navigate('Share')}>
-          <HeaderText> Share </HeaderText>
+          <HeaderText>Share</HeaderText>
       </Button>
     </View>
   )
