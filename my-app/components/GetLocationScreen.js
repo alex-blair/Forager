@@ -6,6 +6,7 @@ import Expo from 'expo'
 
 import DefaultText from './textStyles/DefaultText'
 import HeaderText from './textStyles/HeaderText'
+import ImportantText from './textStyles/ImportantText'
 import styles from './StyleSheet'
 
 export default class GetLocationScreen extends React.Component {
@@ -35,13 +36,17 @@ export default class GetLocationScreen extends React.Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
+        <ImportantText>
+          Initial position:
+        </ImportantText>
         <Text>
-          <Text>Initial position: </Text>
           {this.state.initialPosition}
         </Text>
+        <ImportantText>
+          Current position:
+        </ImportantText>
         <Text>
-          <Text>Current position: </Text>
           {this.state.lastPosition}
         </Text>
       </View>

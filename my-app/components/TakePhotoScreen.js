@@ -17,7 +17,7 @@ export default class UploadImageScreen extends React.Component {
     let { image } = this.state;
 
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <View style={styles.container}>
         <TouchableOpacity onPress={this._pickImage}>
           <View>
             <Text>Take a photo of what you found</Text>
