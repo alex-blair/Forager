@@ -1,12 +1,7 @@
 const getResourcesFromApi = () => {
   return fetch('https://forager-server.herokuapp.com/resources')
     .then((response) => response.json())
-    .then((responseJSON) => {
-      return responseJson.resources
-    })
-    .catch((error) => {
-      console.error(error)
-    })
+    .then((responseJSON) => responseJSON.resources)
 }
 
-export default getResourcesFromApi
+export { getResourcesFromApi }
