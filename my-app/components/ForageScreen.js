@@ -10,7 +10,7 @@ import styles from './StyleSheet'
 
 const navigationOptions = {
   title: 'Resources',
-}
+} //broken at the moment. Is meant to say "Resources" at top of app screen.
 
 const ForageScreen = (props) => {
   const { navigate } = props.navigation
@@ -39,10 +39,14 @@ const ForageScreen = (props) => {
         onPress={() => navigate('GetLocation')}>
           <HeaderText>Get Location</HeaderText>
         </Button>
+        <Button
+        containerStyle={[styles.halfPageButton, styles.greenBackground]}
+        onPress={() => navigate('GetResources')}>
+          <HeaderText>See all resources</HeaderText>
+        </Button>
     </View>
   )
 }
-
 
 export {
     ForageScreen,

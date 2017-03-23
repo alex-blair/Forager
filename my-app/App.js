@@ -7,6 +7,7 @@ import  { MainScreen, navigationOptions as mainNav } from './components/MainScre
 import UploadImageScreen from './components/UploadImageScreen'
 import TakePhotoScreen from './components/TakePhotoScreen'
 import GetLocationScreen from './components/GetLocationScreen'
+import GetResourcesScreen from './components/GetResourcesScreen'
 
 import HeaderText from './components/textStyles/HeaderText'
 
@@ -16,7 +17,8 @@ const App = StackNavigator({
   Share: {screen: ShareScreen},
   UploadImage: {screen: UploadImageScreen},
   TakePhoto: {screen: TakePhotoScreen},
-  GetLocation: {screen: GetLocationScreen}
+  GetLocation: {screen: GetLocationScreen},
+  GetResources: {screen: GetResourcesScreen}
 });
 
 export default App

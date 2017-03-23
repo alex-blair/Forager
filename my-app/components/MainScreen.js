@@ -10,7 +10,7 @@ import styles from './StyleSheet'
 
 const navigationOptions = {
   title: 'Forager',
-}
+} //broken at the moment. Is meant to say this at top of app screen. 
 
 const MainScreen = (props) => {
   const { navigate } = props.navigation

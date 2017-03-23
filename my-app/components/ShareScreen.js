@@ -10,7 +10,7 @@ import styles from './StyleSheet'
 
 const navigationOptions = {
   title: 'Add New Resource',
-};
+}; //broken at the moment. Is meant to say this at top of app screen.
 
 const ShareScreen = (props) => {
   const { navigate } = props.navigation
