@@ -4,6 +4,7 @@ import { createStore, applyMiddleware, combineReduxers, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
 import reducer from './reducers'
+import AppContainer from './containers/AppContainer'
 
 const loggerMiddleware = createLogger({ predicate: (getState, action) => __DEV__ })
 
@@ -42,7 +43,7 @@ const NavigateApp = StackNavigator({
 
 const App = () => (
   <Provider store={store}>
-    <Forager />
+    <AppContainer />
   </Provider>
 );
 
