@@ -3,14 +3,9 @@ import { StackNavigator } from 'react-navigation'
 import { View, Text } from 'react-native'
 import Button from 'react-native-button'
 
-import DefaultText from './textStyles/DefaultText'
-import HeaderText from './textStyles/HeaderText'
-
-import styles from './StyleSheet'
-
-const navigationOptions = {
-  title: 'Add New Resource',
-}; //broken at the moment. Is meant to say this at top of app screen.
+import DefaultText from './styles/textStyles/DefaultText'
+import HeaderText from './styles/textStyles/HeaderText'
+import styles from './styles/StyleSheet'
 
 const ShareScreen = (props) => {
   const { navigate } = props.navigation
@@ -33,6 +28,8 @@ const ShareScreen = (props) => {
     )
 }
 
-export {
-    ShareScreen, navigationOptions
+ShareScreen.navigationOptions = {
+  title: 'Share'
 }
+
+export default ShareScreen

@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
+import { AppRegistry } from 'react-native'
 import { StackNavigator } from 'react-navigation'
 
-import { ForageScreen, navigationOptions as forageNav } from './components/ForageScreen'
-import { ShareScreen, navigationOptions as shareNav } from './components/ShareScreen'
-import  { MainScreen, navigationOptions as mainNav } from './components/MainScreen'
+import ForageScreen from './components/ForageScreen'
+import ShareScreen from './components/ShareScreen'
+import MainScreen from './components/MainScreen'
 import UploadImageScreen from './components/UploadImageScreen'
 import TakePhotoScreen from './components/TakePhotoScreen'
 import GetLocationScreen from './components/GetLocationScreen'
 import GetResourcesScreen from './components/GetResourcesScreen'
-
-import HeaderText from './components/textStyles/HeaderText'
 
 const App = StackNavigator({
   Main: {screen: MainScreen},

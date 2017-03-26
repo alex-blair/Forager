@@ -4,13 +4,9 @@ import { StackNavigator } from 'react-navigation'
 import { View } from 'react-native'
 import Button from 'react-native-button'
 
-import DefaultText from './textStyles/DefaultText'
-import HeaderText from './textStyles/HeaderText'
-import styles from './StyleSheet'
-
-const navigationOptions = {
-  title: 'Resources',
-} //broken at the moment. Is meant to say "Resources" at top of app screen.
+import DefaultText from './styles/textStyles/DefaultText'
+import HeaderText from './styles/textStyles/HeaderText'
+import styles from './styles/StyleSheet'
 
 const ForageScreen = (props) => {
   const { navigate } = props.navigation
@@ -48,7 +44,8 @@ const ForageScreen = (props) => {
   )
 }
 
-export {
-    ForageScreen,
-    navigationOptions,
+ForageScreen.navigationOptions = {
+  title: 'Forage'
 }
+
+export default ForageScreen

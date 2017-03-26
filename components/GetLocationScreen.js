@@ -4,10 +4,10 @@ import { StackNavigator } from 'react-navigation'
 import { View, Text, Image } from 'react-native'
 import Expo from 'expo'
 
-import DefaultText from './textStyles/DefaultText'
-import HeaderText from './textStyles/HeaderText'
-import ImportantText from './textStyles/ImportantText'
-import styles from './StyleSheet'
+import DefaultText from './styles/textStyles/DefaultText'
+import HeaderText from './styles/textStyles/HeaderText'
+import ImportantText from './styles/textStyles/ImportantText'
+import styles from './styles/StyleSheet'
 
 export default class GetLocationScreen extends React.Component {
   state = {

@@ -1,16 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { StyleSheet, ScrollView, View, Text } from 'react-native'
 import { StackNavigator } from 'react-navigation'
 import Button from 'react-native-button'
 
-import DefaultText from './textStyles/DefaultText'
-import HeaderText from './textStyles/HeaderText'
+import DefaultText from './styles/textStyles/DefaultText'
+import HeaderText from './styles/textStyles/HeaderText'
 
-import styles from './StyleSheet'
-
-const navigationOptions = {
-  title: 'Forager',
-} //broken at the moment. Is meant to say this at top of app screen. 
+import styles from './styles/StyleSheet'
 
 const MainScreen = (props) => {
   const { navigate } = props.navigation
@@ -30,7 +26,8 @@ const MainScreen = (props) => {
   )
 }
 
-export {
-  MainScreen,
-  navigationOptions,
+MainScreen.navigationOptions = {
+  title: 'Home'
 }
+
+export default MainScreen

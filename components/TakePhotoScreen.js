@@ -4,11 +4,11 @@ import { StackNavigator } from 'react-navigation'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import Expo from 'expo'
 
-import DefaultText from './textStyles/DefaultText'
-import HeaderText from './textStyles/HeaderText'
-import styles from './StyleSheet'
+import DefaultText from './styles/textStyles/DefaultText'
+import HeaderText from './styles/textStyles/HeaderText'
+import styles from './styles/StyleSheet'
 
-export default class UploadImageScreen extends React.Component {
+export default class TakePhotoScreen extends React.Component {
   state = {
     image: null,
   }
@@ -44,4 +44,8 @@ export default class UploadImageScreen extends React.Component {
   }
 }
 
-Expo.registerRootComponent(UploadImageScreen);
+TakePhotoScreen.navigationOptions = {
+  title: 'Take a Photo'
+}
+
+Expo.registerRootComponent(TakePhotoScreen);

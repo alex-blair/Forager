@@ -3,18 +3,20 @@ import { Components } from 'expo'
 import { StackNavigator } from 'react-navigation'
 import { View, Text } from 'react-native'
 
-import DefaultText from './textStyles/DefaultText'
-import styles from './StyleSheet'
+import DefaultText from './styles/textStyles/DefaultText'
+import styles from './styles/StyleSheet'
 
 import {getResourcesFromApi} from './Api'
 
 const GetResourcesScreen = React.createClass ({
   getInitialState() {
     return {
-      resources: null
+      resources: null,
+      loading: false
     }
   },
   componentDidMount () {
+    this.setState({ loading: true })
     getResourcesFromApi()
       .then(resources => {
         this.renderResources(resources)
@@ -27,15 +29,16 @@ const GetResourcesScreen = React.createClass ({
   },
   renderResources (resources) {
     this.setState({
-      resources: resources
+      resources: resources,
+      loading: false
     })
   },
   render () {
     return (
       <View style={styles.container}>
         <DefaultText>
-          Here are some resources 
-          {JSON.stringify(this.state.resources)}
+          {this.state.loading && <Text>Loading</Text>}
+          {this.state.resources && JSON.stringify(this.state.resources)}
         </DefaultText>
       </View>
     )

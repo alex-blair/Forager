@@ -4,9 +4,9 @@ import { StackNavigator } from 'react-navigation'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import Expo from 'expo'
 
-import DefaultText from './textStyles/DefaultText'
-import HeaderText from './textStyles/HeaderText'
-import styles from './StyleSheet'
+import DefaultText from './styles/textStyles/DefaultText'
+import HeaderText from './styles/textStyles/HeaderText'
+import styles from './styles/StyleSheet'
 
 export default class UploadImageScreen extends React.Component {
   state = {
@@ -42,6 +42,10 @@ export default class UploadImageScreen extends React.Component {
       this.setState({image: result.uri});
     }
   }
+}
+
+UploadImageScreen.navigationOptions = {
+  title: 'Upload'
 }
 
 Expo.registerRootComponent(UploadImageScreen);
