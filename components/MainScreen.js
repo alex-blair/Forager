@@ -23,6 +23,11 @@ const MainScreen = (props) => {
         onPress={() => navigate('Share')}>
           <HeaderText>Share</HeaderText>
       </Button>
+      <Button
+        containerStyle={[styles.halfPageButton, styles.greenBackground]}
+        onPress={() => navigate('AppContainer')}>
+          <HeaderText>Tutorial</HeaderText>
+      </Button>
     </View>
   )
 }

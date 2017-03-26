@@ -6,14 +6,16 @@ import { createLogger } from 'redux-logger'
 import reducer from './reducers'
 import AppContainer from './containers/AppContainer'
 
-const loggerMiddleware = createLogger({ predicate: (getState, action) => __DEV__ })
+const loggerMiddleware = createLogger({
+  predicate: (getState, action) => __DEV__
+})
 
 function configureStore(initialState) {
   const enhancer = compose(
     applyMiddleware(
       thunkMiddleware,
       loggerMiddleware,
-    ),
+    )
   )
   return createStore(reducer, initialState, enhancer)
 }
@@ -38,15 +40,14 @@ const NavigateApp = StackNavigator({
   UploadImage: {screen: UploadImageScreen},
   TakePhoto: {screen: TakePhotoScreen},
   GetLocation: {screen: GetLocationScreen},
-  GetResources: {screen: GetResourcesScreen}
-});
+  GetResources: {screen: GetResourcesScreen},
+  AppContainer: {screen: AppContainer}
+})
 
 const App = () => (
   <Provider store={store}>
-    <AppContainer />
+    <NavigateApp />
   </Provider>
 );
 
-AppRegistry.registerComponent('Forager', () => App)
-
-export default NavigateApp
+export default App

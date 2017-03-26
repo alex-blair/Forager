@@ -11,25 +11,21 @@ const {
 } = ReactNative
 
 class AppContainer extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { recipeCount: 0 }
-  }
-
-  incrementRecipeCount() {
-    this.setState({recipeCount: this.state.recipeCount+1})
+  addRecipe() {
+    this.props.addRecipe()
   }
 
   render() {
-    return
-      <View>
-        <Text style={{marginTop: 20}}>
-        I am App Container! Recipe Count: {this.state.recipeCount}
-        </Text>
-        <TouchableHighlight onPress={() => {this.incrementRecipeCount ()}}>
-          <Text>Add recipe</Text>
-        </TouchableHighlight>
-    </View>
+    return (
+        <View>
+          <Text style={{marginTop: 20}}>
+          I am {this.props.name} App Container! Recipe Count: {this.props.recipeCount}
+          </Text>
+          <TouchableHighlight onPress={() => {this.addRecipe() }}>
+            <Text>Add recipe</Text>
+          </TouchableHighlight>
+      </View>
+    )
   }
 }
 
@@ -37,4 +33,9 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(ActionCreators, dispatch)
 }
 
-export default connect(() => { return {} }, mapDispatchToProps)(AppContainer)
+export default connect((state) => {
+  return {
+    recipeCount: state.recipeCount,
+    name: state.searchedRecipes.name
+  }
+}, mapDispatchToProps)(AppContainer)
