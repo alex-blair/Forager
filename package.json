@@ -23,6 +23,10 @@
     "react": "~15.4.0",
     "react-native": "0.41.2",
     "react-native-button": "^1.8.2",
-    "react-navigation": "^1.0.0-beta.7"
+    "react-navigation": "^1.0.0-beta.7",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.0",
+    "redux-thunk": "^2.2.0"
   }
 }
