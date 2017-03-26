@@ -12,6 +12,7 @@ const MainScreen = (props) => {
   const { navigate } = props.navigation
   return (
     <View style={styles.container}>
+    <Text>Whoop for redux!</Text>
       <Button
       containerStyle={[styles.halfPageButton, styles.greenBackground]}
       onPress={() => navigate('Forage')}>
