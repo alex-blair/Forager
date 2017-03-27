@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux'
-import * as recipesReducer from './recipes'
 
-export default combineReducers(Object.assign(
-  recipesReducer
-))
+import resources from './resources'
+
+export default combineReducers({
+  resources
+})
+
 
 //We're creating a mechanism for adding different reducers and actions from around the application
 
