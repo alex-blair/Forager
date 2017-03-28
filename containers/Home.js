@@ -12,6 +12,20 @@ const {
 
 import { connect } from 'react-redux'
 
+import React, { Component } from 'react'
+import ReactNative from 'react-native'
+const {
+  ScrollView,
+  View,
+  Text,
+  TextInput,
+  Image,
+  TouchableHighlight,
+  StyleSheet
+} = ReactNative
+
+import { connect } from 'react-redux'
+
 class Home extends Component {
   searchPressed() {
     this.props.fetchResources()

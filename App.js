@@ -4,7 +4,6 @@ import { createStore, applyMiddleware, combineReduxers, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
 import reducer from './reducers'
-import AppContainer from './containers/AppContainer'
 
 const loggerMiddleware = createLogger({
   predicate: (getState, action) => __DEV__
@@ -33,6 +32,8 @@ import TakePhotoScreen from './components/TakePhotoScreen'
 import GetLocationScreen from './components/GetLocationScreen'
 import GetResourcesScreen from './components/GetResourcesScreen'
 
+import EditPin from './containers/EditPin'
+
 const NavigateApp = StackNavigator({
   Main: {screen: MainScreen},
   Forage: {screen: ForageScreen},
@@ -41,7 +42,7 @@ const NavigateApp = StackNavigator({
   TakePhoto: {screen: TakePhotoScreen},
   GetLocation: {screen: GetLocationScreen},
   GetResources: {screen: GetResourcesScreen},
-  AppContainer: {screen: AppContainer}
+  EditPin: { screen: EditPin }
 })
 
 const App = () => (
