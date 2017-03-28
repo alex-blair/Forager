@@ -5,6 +5,14 @@ const editPin = (newPin = {}) => {
   }
 }
 
+const addPin = (pin) => {
+  return {
+    type: 'ADD_PIN',
+    pin
+  }
+}
+
 export {
-  editPin
+  editPin,
+  addPin
 }

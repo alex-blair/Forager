@@ -29,10 +29,10 @@ import ShareScreen from './components/ShareScreen'
 import MainScreen from './components/MainScreen'
 import UploadImageScreen from './components/UploadImageScreen'
 import TakePhotoScreen from './components/TakePhotoScreen'
-import GetLocationScreen from './components/GetLocationScreen'
 import GetResourcesScreen from './components/GetResourcesScreen'
 
 import EditPin from './containers/EditPin'
+import ForageContainer from './containers/ForageContainer'
 
 const NavigateApp = StackNavigator({
   Main: {screen: MainScreen},
@@ -40,8 +40,8 @@ const NavigateApp = StackNavigator({
   Share: {screen: ShareScreen},
   UploadImage: {screen: UploadImageScreen},
   TakePhoto: {screen: TakePhotoScreen},
-  GetLocation: {screen: GetLocationScreen},
   GetResources: {screen: GetResourcesScreen},
+  ForageContainer: { screen: ForageContainer },
   EditPin: { screen: EditPin }
 })
 

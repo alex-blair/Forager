@@ -24,11 +24,6 @@ const ShareScreen = (props) => {
         onPress={() => navigate('UploadImage')}>
           <HeaderText>Upload an image</HeaderText>
         </Button>
-        <Button
-        containerStyle={[styles.halfPageButton, styles.greenBackground]}
-        onPress={() => navigate('EditPin')}>
-          <HeaderText>Add a pin</HeaderText>
-        </Button>
       </View>
     )
 }

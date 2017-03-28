@@ -15,7 +15,7 @@ const MainScreen = (props) => {
     <Text>Whoop for redux!</Text>
       <Button
       containerStyle={[styles.halfPageButton, styles.greenBackground]}
-      onPress={() => navigate('Forage')}>
+      onPress={() => navigate('ForageContainer')}>
         <HeaderText>Forage</HeaderText>
       </Button>
       <Button
