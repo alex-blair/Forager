@@ -11,20 +11,22 @@ class ForageContainer extends Component {
   }
 
   render() {
-    return <ForageScreen pins={this.props.pins} addPin={this.props.addPin}/>
+    console.log(this.props.currentPos)
+    return <ForageScreen pins={this.props.pins} addPin={this.props.addPin} currentPos={this.props.currentPos}/>
   }
 }
 
 const mapStateToProps = state => {
   return {
-    pins: state.pins.pinList
+    pins: state.pins.pinList,
+    currentPos: state.pins.currentPos
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    addPin: (pin) => dispatch(pinActions.addPin(pin))
+    addPin: (pin) => dispatch(pinActions.addPin(pin)),
+    }
   }
-}
 
 export default connect(mapStateToProps, mapDispatchToProps)(ForageContainer)

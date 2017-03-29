@@ -2,24 +2,12 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, combineReduxers, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
-import { createLogger } from 'redux-logger'
-import reducer from './reducers'
+import reducers from './reducers'
+import { getCurrentPosition } from './actions/pins'
 
-const loggerMiddleware = createLogger({
-  predicate: (getState, action) => __DEV__
-})
-
-function configureStore(initialState) {
-  const enhancer = compose(
-    applyMiddleware(
-      thunkMiddleware,
-      loggerMiddleware,
-    )
-  )
-  return createStore(reducer, initialState, enhancer)
-}
-
-const store = configureStore({})
+let store = createStore(reducers, compose(
+  applyMiddleware(thunkMiddleware)
+))
 
 import { AppRegistry } from 'react-native'
 import { StackNavigator } from 'react-navigation'
@@ -44,6 +32,8 @@ const NavigateApp = StackNavigator({
   ForageContainer: { screen: ForageContainer },
   EditPin: { screen: EditPin }
 })
+
+store.dispatch(getCurrentPosition()) //Potentially move to ForageScreen?
 
 const App = () => (
   <Provider store={store}>
