@@ -1,3 +1,5 @@
+// "eslint:recommended", "plugin:react/recommended"
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
@@ -11,22 +13,24 @@ class ForageContainer extends Component {
   }
 
   render() {
-    console.log(this.props.currentPos)
-    return <ForageScreen pins={this.props.pins} addPin={this.props.addPin} currentPos={this.props.currentPos}/>
+    return <ForageScreen pinList={this.props.pinList} addPin={this.props.addPin} currentPos={this.props.currentPos}/>
   }
 }
 
 const mapStateToProps = state => {
   return {
-    pins: state.pins.pinList,
+    pinList: state.pins.pinList,
     currentPos: state.pins.currentPos
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    addPin: (pin) => dispatch(pinActions.addPin(pin)),
+    addPin: (currentPos) => dispatch(pinActions.addPin(currentPos)),
     }
   }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ForageContainer)
+
+
+  // this.props.pinList.map(pin => console.log(pin))

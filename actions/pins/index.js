@@ -7,17 +7,17 @@ export const editPin = (newPin = {}) => {
   }
 }
 
-export const addPin = (pin) => {
+export const addPin = (currentPos) => {
   return {
     type: 'ADD_PIN',
-    pin
+    currentPos
   }
 }
 
 export const updateCurrentPosition = (location) => {
   return {
     type: 'UPDATE_CURRENT_POSITION',
-    location: {...location, latitudeDelta: 0.05, longitudeDelta: 0.04}
+    location: {...location, latitudeDelta: 0.004, longitudeDelta: 0.005, title:'Apples', description: 'So tasty!'}
   }
 }
 

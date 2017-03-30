@@ -27,7 +27,7 @@ const editPin = (state, action) => {
 const addPin = (state, action) => {
   const pinList = [
     ...state.pinList,
-    action.pin
+    action.currentPos
   ]
   return {
     ...state,

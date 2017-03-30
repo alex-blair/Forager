@@ -1,6 +1,6 @@
   import React, { Component } from 'react'
-  import { Components, Location } from 'expo' //do you still need to import location?
-  import { View, Text } from 'react-native'
+  import { Components } from 'expo' //do you still need to import location?
+  import { View } from 'react-native'
   import Button from 'react-native-button'
 
   import DefaultText from './styles/textStyles/DefaultText'
@@ -9,8 +9,8 @@
 
   class ForageScreen extends Component {
 
-    placePin (position) {
-      this.props.addPin(position)
+    placePin (currentPos) {
+      this.props.addPin(currentPos)
     }
 
     render (props) {
@@ -18,12 +18,12 @@
         <View style={styles.container}>
           <View>
             <HeaderText>Map</HeaderText>
-            <DefaultText>Move around the map to find resourcess</DefaultText>
+            <DefaultText>Click on a pin to view a resource</DefaultText>
             <Components.MapView
               style={styles.mapBox}
               initialRegion={this.props.currentPos}
             >
-              {this.props.pins.map((pos, i) => <Components.MapView.Marker key={i} coordinate={pos} />)}
+              {this.props.pinList.map((pos, i) => <Components.MapView.Marker key={i} coordinate={pos} title={pos.title} description={pos.description}/>)}
             </Components.MapView>
             <Button
             containerStyle={[styles.halfPageButton, styles.greenBackground]}
@@ -36,8 +36,8 @@
     }
   }
 
-  ForageScreen.navigationOptions = {
-    title: 'Forage'
-  }
+  // ForageScreen.navigationOptions = {
+  //   title: 'Forage'
+  // }
 
   export default ForageScreen

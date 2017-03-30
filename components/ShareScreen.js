@@ -1,6 +1,5 @@
 import React from 'react'
-import { StackNavigator } from 'react-navigation'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import Button from 'react-native-button'
 
 import DefaultText from './styles/textStyles/DefaultText'

@@ -25,7 +25,7 @@ class EditPin extends Component {
   }
 
   render () {
-    const { pin } = this.props
+    const {pin} = this.props
 
     return (
       <View>
