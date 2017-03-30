@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { View } from 'react-native'
 import Button from 'react-native-button'
 
@@ -22,6 +22,10 @@ const MainScreen = (props) => {
       </Button>
     </View>
   )
+}
+
+MainScreen.propTypes = {
+  navigation: PropTypes.object
 }
 
 MainScreen.navigationOptions = {

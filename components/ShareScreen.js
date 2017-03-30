@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { View } from 'react-native'
 import Button from 'react-native-button'
 
@@ -25,6 +25,10 @@ const ShareScreen = (props) => {
         </Button>
       </View>
     )
+}
+
+ShareScreen.propTypes = {
+  navigation: PropTypes.object
 }
 
 ShareScreen.navigationOptions = {
