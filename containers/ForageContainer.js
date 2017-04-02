@@ -8,12 +8,8 @@ import * as pinActions from '../actions/pins/'
 import ForageScreen from '../components/ForageScreen'
 
 class ForageContainer extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    return <ForageScreen pinList={this.props.pinList} addPin={this.props.addPin} currentPos={this.props.currentPos}/>
+  render () {
+    return <ForageScreen pinList={this.props.pinList} addPin={this.props.addPin} currentPos={this.props.currentPos} />
   }
 }
 
@@ -26,11 +22,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addPin: (currentPos) => dispatch(pinActions.addPin(currentPos)),
-    }
+    addPin: (currentPos) => dispatch(pinActions.addPin(currentPos))
   }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(ForageContainer)
-
 
   // this.props.pinList.map(pin => console.log(pin))

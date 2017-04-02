@@ -11,14 +11,14 @@ const MainScreen = (props) => {
   return (
     <View style={styles.container}>
       <Button
-      containerStyle={[styles.halfPageButton, styles.greenBackground]}
-      onPress={() => navigate('ForageContainer')}>
+        containerStyle={[styles.halfPageButton, styles.greenBackground]}
+        onPress={() => navigate('ForageContainer')}>
         <HeaderText>Forage</HeaderText>
       </Button>
       <Button
         containerStyle={[styles.halfPageButton, styles.greenBackground]}
         onPress={() => navigate('Share')}>
-          <HeaderText>Share</HeaderText>
+        <HeaderText>Share</HeaderText>
       </Button>
     </View>
   )

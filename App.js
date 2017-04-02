@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Provider } from 'react-redux'
-import { createStore, applyMiddleware, combineReduxers, compose } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import reducers from './reducers'
 import { getCurrentPosition } from './actions/pins'
@@ -9,7 +9,6 @@ let store = createStore(reducers, compose(
   applyMiddleware(thunkMiddleware)
 ))
 
-import { AppRegistry } from 'react-native'
 import { StackNavigator } from 'react-navigation'
 
 import ForageScreen from './components/ForageScreen'
@@ -35,12 +34,12 @@ const NavigateApp = StackNavigator({
   // Callout: { screen: Callout }
 })
 
-store.dispatch(getCurrentPosition()) //Potentially move to ForageScreen?
+store.dispatch(getCurrentPosition()) // Potentially move to ForageScreen?
 
 const App = () => (
   <Provider store={store}>
     <NavigateApp />
   </Provider>
-);
+)
 
 export default App

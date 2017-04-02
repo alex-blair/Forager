@@ -6,51 +6,51 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor:'#fef2e4',
+    backgroundColor: '#fef2e4'
   },
   mapContainer: {
-   flexDirection: 'column',
-   alignSelf: 'flex-start',
- },
- callout: {
-  width: 140,
-},
+    flexDirection: 'column',
+    alignSelf: 'flex-start'
+  },
+  callout: {
+    width: 140
+  },
   halfPageButton: {
     width: 300,
     height: 100,
     margin: 25,
-    overflow:'hidden',
-    borderRadius:4,
+    overflow: 'hidden',
+    borderRadius: 4,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   mapBox: {
     width: 300,
     height: 300,
     margin: 25,
-    overflow:'hidden',
-    borderRadius:4,
+    overflow: 'hidden',
+    borderRadius: 4,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   whiteBackground: {
-    backgroundColor: '#fef2e4',
+    backgroundColor: '#fef2e4'
   },
   greenBackground: {
-    backgroundColor: '#376565',
+    backgroundColor: '#376565'
   },
   white: {
     color: '#fef2e4',
-    fontSize: 30,
+    fontSize: 30
   },
   green: {
     color: '#376565',
-    fontSize: 30,
+    fontSize: 30
   },
   bold: {
     fontWeight: 'bold',
     fontSize: 30,
-    color: 'yellow',
+    color: 'yellow'
   },
   bubble: {
     flexDirection: 'row',
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     borderWidth: 0.5,
     padding: 15,
-    width: 150,
+    width: 150
   },
   // Arrow below the bubble
   arrow: {
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     borderTopColor: '#fff',
     borderWidth: 16,
     alignSelf: 'center',
-    marginTop: -32,
+    marginTop: -32
   },
   arrowBorder: {
     backgroundColor: 'transparent',
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     borderTopColor: '#007a87',
     borderWidth: 16,
     alignSelf: 'center',
-    marginTop: -0.5,
+    marginTop: -0.5
   },
   // Character name
   name: {
@@ -89,9 +89,9 @@ const styles = StyleSheet.create({
   // Character image
   image: {
     width: 120,
-    height: 80,
-  },
-});
+    height: 80
+  }
+})
 
 export default styles
 

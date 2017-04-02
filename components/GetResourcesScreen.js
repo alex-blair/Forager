@@ -1,6 +1,4 @@
 import React from 'react'
-import { Components } from 'expo'
-import { StackNavigator } from 'react-navigation'
 import { View, Text } from 'react-native'
 
 import DefaultText from './styles/textStyles/DefaultText'
@@ -8,8 +6,8 @@ import styles from './styles/StyleSheet'
 
 import {getResourcesFromApi} from './Api'
 
-const GetResourcesScreen = React.createClass ({
-  getInitialState() {
+const GetResourcesScreen = React.createClass({
+  getInitialState () {
     return {
       resources: null,
       loading: false

@@ -42,5 +42,4 @@ const updateCurrentPosition = (state, action) => {
   }
 }
 
-
 export default pins

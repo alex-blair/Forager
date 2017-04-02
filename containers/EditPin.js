@@ -8,16 +8,11 @@ import EditLocation from '../components/pinWizard/EditLocation'
 import EditNotes from '../components/pinWizard/EditNotes'
 
 class EditPin extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount () {
     this.props.overridePin()
   }
 
   editResourceType (resourceType) {
-    console.log(resourceType)
     this.props.overridePin({
       ...this.props.pin,
       resourceType

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { Components } from 'expo' //do you still need to import location?
+import { Components } from 'expo' // do you still need to import location?
 import { View } from 'react-native'
 import Button from 'react-native-button'
 
@@ -10,7 +10,6 @@ import styles from './styles/StyleSheet'
 import Callout from './Callout'
 
 class ForageScreen extends Component {
-
   placePin (currentPos) {
     this.props.addPin(currentPos)
   }
@@ -24,15 +23,15 @@ class ForageScreen extends Component {
             style={styles.mapBox}
             initialRegion={this.props.currentPos}
           >
-            {this.props.pinList.map((pos, i) => <Components.MapView.Marker key={i} coordinate={pos} calloutOffset={{ x: -8, y: 28 }} pinColor={'#fd974f'}>
-            <Components.MapView.Callout tooltip style={styles.callout}>
-              <Callout />
-            </Components.MapView.Callout></Components.MapView.Marker>
+            {this.props.pinList.map((pos, i) => <Components.MapView.Marker key={i} coordinate={pos} calloutOffset={{ x: -8, y: 28 }} pinColor={'#C60000'}>
+              <Components.MapView.Callout tooltip style={styles.callout}>
+                <Callout />
+              </Components.MapView.Callout></Components.MapView.Marker>
           )}
           </Components.MapView>
           <Button
-          containerStyle={[styles.halfPageButton, styles.greenBackground]}
-          onPress={() => this.placePin(this.props.currentPos)}>
+            containerStyle={[styles.halfPageButton, styles.greenBackground]}
+            onPress={() => this.placePin(this.props.currentPos)}>
             <HeaderText>Add Pin</HeaderText>
           </Button>
         </View>
@@ -46,7 +45,6 @@ ForageScreen.propTypes = {
   currentPos: PropTypes.object,
   pinList: PropTypes.array
 }
-
 
 // ForageScreen.navigationOptions = {
 //   title: 'Forage'
