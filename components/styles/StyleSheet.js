@@ -8,6 +8,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor:'#fef2e4',
   },
+  mapContainer: {
+   flexDirection: 'column',
+   alignSelf: 'flex-start',
+ },
+ callout: {
+  width: 140,
+},
   halfPageButton: {
     width: 300,
     height: 100,
@@ -44,7 +51,46 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 30,
     color: 'yellow',
-  }
+  },
+  bubble: {
+    flexDirection: 'row',
+    alignSelf: 'flex-start',
+    backgroundColor: '#fff',
+    borderRadius: 6,
+    borderColor: '#ccc',
+    borderWidth: 0.5,
+    padding: 15,
+    width: 150,
+  },
+  // Arrow below the bubble
+  arrow: {
+    backgroundColor: 'transparent',
+    borderColor: 'transparent',
+    borderTopColor: '#fff',
+    borderWidth: 16,
+    alignSelf: 'center',
+    marginTop: -32,
+  },
+  arrowBorder: {
+    backgroundColor: 'transparent',
+    borderColor: 'transparent',
+    borderTopColor: '#007a87',
+    borderWidth: 16,
+    alignSelf: 'center',
+    marginTop: -0.5,
+  },
+  // Character name
+  name: {
+    fontSize: 20,
+    marginBottom: 5,
+    textAlign: 'center',
+    color: '#fd974f'
+  },
+  // Character image
+  image: {
+    width: 120,
+    height: 80,
+  },
 });
 
 export default styles

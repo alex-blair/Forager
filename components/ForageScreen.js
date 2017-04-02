@@ -7,6 +7,8 @@ import DefaultText from './styles/textStyles/DefaultText'
 import HeaderText from './styles/textStyles/HeaderText'
 import styles from './styles/StyleSheet'
 
+import Callout from './Callout'
+
 class ForageScreen extends Component {
 
   placePin (currentPos) {
@@ -17,13 +19,16 @@ class ForageScreen extends Component {
     return (
       <View style={styles.container}>
         <View>
-          <HeaderText>Map</HeaderText>
           <DefaultText>Click on a pin to view a resource</DefaultText>
           <Components.MapView
             style={styles.mapBox}
             initialRegion={this.props.currentPos}
           >
-            {this.props.pinList.map((pos, i) => <Components.MapView.Marker key={i} coordinate={pos} title={pos.title} description={pos.description}/>)}
+            {this.props.pinList.map((pos, i) => <Components.MapView.Marker key={i} coordinate={pos} calloutOffset={{ x: -8, y: 28 }} pinColor={'#fd974f'}>
+            <Components.MapView.Callout tooltip style={styles.callout}>
+              <Callout />
+            </Components.MapView.Callout></Components.MapView.Marker>
+          )}
           </Components.MapView>
           <Button
           containerStyle={[styles.halfPageButton, styles.greenBackground]}
@@ -42,8 +47,11 @@ ForageScreen.propTypes = {
   pinList: PropTypes.array
 }
 
+
 // ForageScreen.navigationOptions = {
 //   title: 'Forage'
 // }
+
+// title={pos.title} description={pos.description}
 
 export default ForageScreen

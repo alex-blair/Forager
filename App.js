@@ -18,6 +18,7 @@ import MainScreen from './components/MainScreen'
 import UploadImageScreen from './components/UploadImageScreen'
 import TakePhotoScreen from './components/TakePhotoScreen'
 import GetResourcesScreen from './components/GetResourcesScreen'
+// import Callout from './components/Callout'
 
 import EditPin from './containers/EditPin'
 import ForageContainer from './containers/ForageContainer'
@@ -31,6 +32,7 @@ const NavigateApp = StackNavigator({
   GetResources: {screen: GetResourcesScreen},
   ForageContainer: { screen: ForageContainer },
   EditPin: { screen: EditPin }
+  // Callout: { screen: Callout }
 })
 
 store.dispatch(getCurrentPosition()) //Potentially move to ForageScreen?

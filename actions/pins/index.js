@@ -17,7 +17,7 @@ export const addPin = (currentPos) => {
 export const updateCurrentPosition = (location) => {
   return {
     type: 'UPDATE_CURRENT_POSITION',
-    location: {...location, latitudeDelta: 0.004, longitudeDelta: 0.005, title:'Apples', description: 'So tasty!'}
+    location: {...location, latitudeDelta: 0.004, longitudeDelta: 0.005, title:'Unknown', description: 'Click to edit'}
   }
 }
 
