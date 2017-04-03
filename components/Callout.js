@@ -6,7 +6,7 @@ import {
 import Button from 'react-native-button'
 
 import styles from './styles/StyleSheet'
-import HeaderText from './styles/textStyles/HeaderText'
+import SmallHeaderText from './styles/textStyles/SmallHeaderText'
 
 export default class Callout extends Component {
   render () {
@@ -14,10 +14,10 @@ export default class Callout extends Component {
       <View style={styles.mapContainer}>
         <View style={styles.bubble}>
           <View>
-            <Text style={styles.name}>Unknown</Text>
+            <Text style={styles.name}>Mystery resource</Text>
             <Button
-              containerStyle={styles.greenBackground} >
-              <HeaderText>Edit</HeaderText>
+              containerStyle={styles.editButton} >
+              <SmallHeaderText>Edit</SmallHeaderText>
             </Button>
           </View>
         </View>

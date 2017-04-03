@@ -60,7 +60,9 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     borderWidth: 0.5,
     padding: 15,
-    width: 150
+    width: 150,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   // Arrow below the bubble
   arrow: {
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
   },
   // Character name
   name: {
-    fontSize: 20,
+    fontSize: 12,
     marginBottom: 5,
     textAlign: 'center',
     color: '#fd974f'
@@ -90,6 +92,13 @@ const styles = StyleSheet.create({
   image: {
     width: 120,
     height: 80
+  },
+  editButton: {
+    backgroundColor: '#fd974f',
+    overflow: 'hidden',
+    borderRadius: 4,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 })
 

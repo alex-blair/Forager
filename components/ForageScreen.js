@@ -23,7 +23,7 @@ class ForageScreen extends Component {
             style={styles.mapBox}
             initialRegion={this.props.currentPos}
           >
-            {this.props.pinList.map((pos, i) => <Components.MapView.Marker key={i} coordinate={pos} calloutOffset={{ x: -8, y: 28 }} pinColor={'#C60000'}>
+            {this.props.pinList.map((pos, i) => <Components.MapView.Marker key={i} coordinate={pos} calloutOffset={{ x: -8, y: 28 }} pinColor={'#376565'}>
               <Components.MapView.Callout tooltip style={styles.callout}>
                 <Callout />
               </Components.MapView.Callout></Components.MapView.Marker>
