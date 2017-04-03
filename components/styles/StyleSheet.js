@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  // Arrow below the bubble
   arrow: {
     backgroundColor: 'transparent',
     borderColor: 'transparent',
@@ -81,14 +80,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: -0.5
   },
-  // Character name
   name: {
     fontSize: 12,
     marginBottom: 5,
     textAlign: 'center',
     color: '#fd974f'
   },
-  // Character image
   image: {
     width: 120,
     height: 80

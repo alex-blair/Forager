@@ -1,5 +1,3 @@
-// "eslint:recommended", "plugin:react/recommended"
-
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
@@ -27,5 +25,3 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ForageContainer)
-
-  // this.props.pinList.map(pin => console.log(pin))
