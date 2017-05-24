@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Components } from 'expo'
 import { StackNavigator } from 'react-navigation'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
@@ -8,7 +8,7 @@ import DefaultText from './styles/textStyles/DefaultText'
 import HeaderText from './styles/textStyles/HeaderText'
 import styles from './styles/StyleSheet'
 
-export default class TakePhotoScreen extends React.Component {
+export default class TakePhotoScreen extends Component {
   state = {
     image: null,
   }
