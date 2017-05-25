@@ -9,12 +9,15 @@ import HeaderText from './styles/textStyles/HeaderText'
 import styles from './styles/StyleSheet'
 
 export default class UploadImageScreen extends Component {
-  state = {
-    image: null,
+  constructor (props) {
+    super(props)
+    this.state = {
+      image: null
+    }
   }
 
   render() {
-    let { image } = this.state;
+    let { image } = this.state
 
     return (
       <View style={styles.container}>
@@ -36,10 +39,10 @@ export default class UploadImageScreen extends Component {
       aspect: [4,3]
     });
 
-    console.log(result);
+    console.log(result)
 
     if (!result.cancelled) {
-      this.setState({image: result.uri});
+      this.setState({image: result.uri})
     }
   }
 }
@@ -48,4 +51,4 @@ UploadImageScreen.navigationOptions = {
   title: 'Upload'
 }
 
-Expo.registerRootComponent(UploadImageScreen);
+Expo.registerRootComponent(UploadImageScreen)
