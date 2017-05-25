@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 
 import DefaultText from './styles/textStyles/DefaultText'
@@ -6,13 +6,14 @@ import styles from './styles/StyleSheet'
 
 import {getResourcesFromApi} from './Api'
 
-const GetResourcesScreen = React.createClass({
-  getInitialState () {
-    return {
+class GetResourcesScreen extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
       resources: null,
       loading: false
     }
-  },
+  }
   componentDidMount () {
     this.setState({ loading: true })
     getResourcesFromApi()
@@ -24,13 +25,13 @@ const GetResourcesScreen = React.createClass({
           error: err
         })
       })
-  },
+  }
   renderResources (resources) {
     this.setState({
       resources: resources,
       loading: false
     })
-  },
+  }
   render () {
     return (
       <View style={styles.container}>
@@ -41,6 +42,6 @@ const GetResourcesScreen = React.createClass({
       </View>
     )
   }
-})
+}
 
 export default GetResourcesScreen
