@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
+It's a foraging app, inspired by the [Otautahi Urban Foraging Google Map](https://www.ecofind.co.nz/food-drink/otautahi-urban-foraging/). 
+
+The app will allow users to see resources on the map and add pins when they find new foraging locations. It's still in development. Watch this space!  
+
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
 
 ## Table of Contents
