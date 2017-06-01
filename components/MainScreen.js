@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import { View } from 'react-native'
 import Button from 'react-native-button'
+import { gql, graphql } from 'react-apollo'
 
 import HeaderText from './styles/textStyles/HeaderText'
 
@@ -14,6 +15,7 @@ const MainScreen = (props) => {
         containerStyle={[styles.halfPageButton, styles.greenBackground]}
         onPress={() => navigate('ForageContainer')}>
         <HeaderText>Forage</HeaderText>
+        <HeaderText>{JSON.stringify(props.data.hello)}</HeaderText>
       </Button>
       <Button
         containerStyle={[styles.halfPageButton, styles.greenBackground]}
@@ -32,4 +34,11 @@ MainScreen.navigationOptions = {
   title: 'Home'
 }
 
-export default MainScreen
+
+const doTheQl = graphql(gql`
+  {
+    hello
+  }
+`)
+
+export default doTheQl(MainScreen)

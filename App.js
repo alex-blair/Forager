@@ -2,6 +2,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
+import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apollo'
 import reducers from './reducers'
 import { getCurrentPosition } from './actions/pins'
 
@@ -36,10 +37,18 @@ const NavigateApp = StackNavigator({
 
 store.dispatch(getCurrentPosition()) // Potentially move to ForageScreen?
 
+const client = new ApolloClient({
+  networkInterface: createNetworkInterface({
+    uri: 'http://localhost:3000/graphql'
+  })
+})
+
 const App = () => (
-  <Provider store={store}>
-    <NavigateApp />
-  </Provider>
+  <ApolloProvider client={client}>
+    <Provider store={store}>
+      <NavigateApp />
+    </Provider>
+  </ApolloProvider>
 )
 
 export default App
