@@ -27,9 +27,11 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "apollo-client": "^1.8.0",
     "expo": "14.0.2",
+    "graphql-tag": "^2.4.2",
     "react": "^15.4.2",
-    "react-apollo": "^1.4.2",
+    "react-apollo": "^1.4.3",
     "react-native": "0.41.2",
     "react-native-button": "^1.8.2",
     "react-navigation": "^1.0.0-beta.7",
