@@ -1,5 +1,4 @@
 import React from 'react'
-import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apollo'
@@ -18,6 +17,7 @@ import MainScreen from './components/MainScreen'
 import UploadImageScreen from './components/UploadImageScreen'
 import TakePhotoScreen from './components/TakePhotoScreen'
 import GetResourcesScreen from './components/GetResourcesScreen'
+import FetchResourcesScreen from './components/FetchResourcesScreen'
 // import Callout from './components/Callout'
 
 import EditPin from './containers/EditPin'
@@ -30,6 +30,7 @@ const NavigateApp = StackNavigator({
   UploadImage: {screen: UploadImageScreen},
   TakePhoto: {screen: TakePhotoScreen},
   GetResources: {screen: GetResourcesScreen},
+  FetchResources: {screen: FetchResourcesScreen},
   ForageContainer: { screen: ForageContainer },
   EditPin: { screen: EditPin }
   // Callout: { screen: Callout }
@@ -39,15 +40,13 @@ store.dispatch(getCurrentPosition()) // Potentially move to ForageScreen?
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
-    uri: 'http://localhost:3000/graphql'
+    uri: 'https://forager-server.herokuapp.com/graphql'
   })
 })
 
 const App = () => (
-  <ApolloProvider client={client}>
-    <Provider store={store}>
-      <NavigateApp />
-    </Provider>
+  <ApolloProvider client={client} store={store}>
+    <NavigateApp />
   </ApolloProvider>
 )
 

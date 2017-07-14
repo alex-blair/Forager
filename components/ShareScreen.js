@@ -25,7 +25,7 @@ const ShareScreen = (props) => {
       </Button>
       <Button
         containerStyle={[styles.halfPageButton, styles.greenBackground]}
-        onPress={() => navigate('GetResources')}>
+        onPress={() => navigate('FetchResources')}>
         <HeaderText>Fetch resources</HeaderText>
       </Button>
     </View>
