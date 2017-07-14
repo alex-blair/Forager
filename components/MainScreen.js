@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react'
 import { View } from 'react-native'
 import Button from 'react-native-button'
-import { gql, graphql } from 'react-apollo'
 
 import HeaderText from './styles/textStyles/HeaderText'
 
@@ -33,17 +32,4 @@ MainScreen.navigationOptions = {
   title: 'Home'
 }
 
-const doTheQl = graphql(gql`
-  {
-    viewer
-    {
-      resources
-      {
-        category
-        item
-      }
-    }
-  }
-`)
-
-export default doTheQl(MainScreen)
+export default MainScreen
