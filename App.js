@@ -17,7 +17,6 @@ import MainScreen from './components/MainScreen'
 import UploadImageScreen from './components/UploadImageScreen'
 import TakePhotoScreen from './components/TakePhotoScreen'
 import GetResourcesScreen from './components/GetResourcesScreen'
-import FetchResourcesScreen from './components/FetchResourcesScreen'
 // import Callout from './components/Callout'
 
 import EditPin from './containers/EditPin'
@@ -30,7 +29,6 @@ const NavigateApp = StackNavigator({
   UploadImage: {screen: UploadImageScreen},
   TakePhoto: {screen: TakePhotoScreen},
   GetResources: {screen: GetResourcesScreen},
-  FetchResources: {screen: FetchResourcesScreen},
   ForageContainer: { screen: ForageContainer },
   EditPin: { screen: EditPin }
   // Callout: { screen: Callout }

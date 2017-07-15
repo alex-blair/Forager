@@ -10,9 +10,6 @@ const ShareScreen = (props) => {
   const { navigate } = props.navigation
   return (
     <View style={styles.container}>
-      <DefaultText>
-        What have you found?
-      </DefaultText>
       <Button
         containerStyle={[styles.halfPageButton, styles.greenBackground]}
         onPress={() => navigate('TakePhoto')}>
@@ -25,8 +22,8 @@ const ShareScreen = (props) => {
       </Button>
       <Button
         containerStyle={[styles.halfPageButton, styles.greenBackground]}
-        onPress={() => navigate('FetchResources')}>
-        <HeaderText>Fetch resources</HeaderText>
+        onPress={() => navigate('GetResources')}>
+        <HeaderText>Get resources</HeaderText>
       </Button>
     </View>
   )

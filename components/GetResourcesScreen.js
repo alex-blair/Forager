@@ -1,47 +1,37 @@
-import React, { Component } from 'react'
+import React, { PropTypes } from 'react'
 import { View, Text } from 'react-native'
 
 import DefaultText from './styles/textStyles/DefaultText'
 import styles from './styles/StyleSheet'
 
-import {getResourcesFromApi} from './Api'
+import { gql, graphql } from 'react-apollo'
 
-class GetResourcesScreen extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      resources: null,
-      loading: false
-    }
-  }
-  componentDidMount () {
-    this.setState({ loading: true })
-    getResourcesFromApi()
-      .then(resources => {
-        this.renderResources(resources)
-      })
-      .catch(err => {
-        this.setState({
-          error: err
-        })
-      })
-  }
-  renderResources (resources) {
-    this.setState({
-      resources: resources,
-      loading: false
-    })
-  }
-  render () {
-    return (
-      <View style={styles.container}>
-        <DefaultText>
-          {this.state.loading && <Text>Loading</Text>}
-          {this.state.resources && JSON.stringify(this.state.resources)}
-        </DefaultText>
-      </View>
-    )
-  }
+const GetResourcesScreen = (props) => {
+  return (
+    <View style={styles.container}>
+      <DefaultText>
+        {props.data.loading && <Text>Loading</Text>}
+        {!props.data.loading && JSON.stringify(props)}
+      </DefaultText>
+    </View>
+  )
 }
 
-export default GetResourcesScreen
+GetResourcesScreen.propTypes = {
+  data: PropTypes.object
+}
+
+const getResourcesQuery = graphql(gql`
+  {
+    viewer
+    {
+      resources
+      {
+        category
+        item
+      }
+    }
+  }
+`)
+
+export default getResourcesQuery(GetResourcesScreen)
